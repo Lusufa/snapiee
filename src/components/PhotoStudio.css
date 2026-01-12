@@ -23,7 +23,7 @@
   padding: 0;
   height: 100vh;
   position: relative;
-  background-image: url('/images/soft.png'); /* relative to /public */
+  background-image: url('/images/ch.png'); /* relative to /public */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -124,7 +124,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image: url('https://www.transparenttextures.com/patterns/noise.png'); /* or use your own grain png */
+  background-image: url('/bg.png'); /* or use your own grain png */
   opacity: 0.2;
   mix-blend-mode: overlay;
   z-index: 2;
@@ -346,7 +346,9 @@
 }
 
 .studio-result{
-    background-color: #5C4033;
+    background-image: url('/images/bg.png');
+    background-size: cover;
+    background-position: center;
     height: 700px;
     width: 700px;
     border-radius: 30px;

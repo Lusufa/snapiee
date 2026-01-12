@@ -8,7 +8,7 @@ const filters = [
   "2000s",
   "Noir",
   "Fisheye",
-  "Rainbow",
+  "Vintage",
   "Glitch",
   "Crosshatch",
 ];
@@ -56,9 +56,6 @@ const PhotoStudio = () => {
         cssFilter =
           "saturate(1.8) contrast(1.05) brightness(1.1) sepia(0.1) hue-rotate(10deg)";
         break;
-      case "rainbow":
-        cssFilter = "hue-rotate(90deg)";
-        break;
       case "glitch":
         cssFilter = "contrast(1.5) saturate(2)";
         break;
@@ -68,6 +65,9 @@ const PhotoStudio = () => {
       case "fisheye":
         cssFilter = "brightness(1.1)";
         break;
+      case "vintage":
+         cssFilter ="sepia(0.4) contrast(1.1) brightness(0.95)";
+         break;
     }
 
     ctx.filter = cssFilter;
@@ -119,7 +119,7 @@ const PhotoStudio = () => {
 
     const link = document.createElement("a");
     link.href = dataURL;
-    link.download = "dvBooth-strip.jpg";
+    link.download = "snapiee-strip.jpg";
     link.click();
   };
 
@@ -195,7 +195,7 @@ const PhotoStudio = () => {
               </div>
             ))}
             <p className="photostrip-caption">
-              dvBooth •{" "}
+              snapiee •{" "}
               {new Date().toLocaleDateString("en-IN", {
                 day: "numeric",
                 month: "long",

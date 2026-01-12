@@ -12,7 +12,6 @@ const PhotoBooth = () => {
 
   const handleCoinClick = () => {
     setCurtainOpen(true);
-
     setTimeout(() => {
       setShowStudio(true);
     }, 1000);
@@ -24,7 +23,7 @@ const PhotoBooth = () => {
 
   return (
     <div className="booth-container">
-      <div className="booth-header">Dv PhotoBooth</div>
+      <div className="booth-header">Snapiee</div>
 
       <div className="booth-body">
         <div className="coin-slot">
@@ -39,7 +38,16 @@ const PhotoBooth = () => {
           )}
         </div>
 
-        <div className="curtain-wrapper">
+        {/* Background image from public/ch.png */}
+        <div
+          className="curtain-wrapper"
+          style={{
+            backgroundImage: "url(/bg.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
           <Webcam
             audio={false}
             screenshotFormat="image/jpeg"
