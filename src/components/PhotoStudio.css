@@ -233,6 +233,10 @@
       height: 50vh;
     }
 
+    .webcam-view {
+      transform: scaleX(-1);
+    }
+
     .filter-bar {
       -webkit-overflow-scrolling: touch;
       scrollbar-width: thin;
