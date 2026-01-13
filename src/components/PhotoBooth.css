@@ -27,12 +27,13 @@
   background-size: cover;
   background-position: center;
   color: var(--foreground);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .booth-header {
@@ -45,6 +46,7 @@
   margin-bottom: 20px;
   letter-spacing: 1px;
   border: 3px solid var(--border);
+  text-align: center;
 }
 
 .booth-body {
@@ -52,9 +54,10 @@
   border: 4px solid var(--border);
   border-radius: 20px;
   overflow: hidden;
-  width: 700px;
-  height: 400px;
+  width: 100%;
+  max-width: 700px;
   background: var(--card);
+  flex-direction: row;
 }
 
 .coin-slot {
@@ -69,6 +72,7 @@
   font-size: 14px;
   padding: 10px;
   border-right: 2px solid var(--border);
+  flex-shrink: 0;
 }
 
 .slot {
@@ -85,6 +89,7 @@
   position: relative;
   background: var(--background);
   overflow: hidden;
+  min-height: 300px;
 }
 
 .webcam-preview {
@@ -129,4 +134,24 @@
 
 .curtain.open {
   transform: translateX(-100%);
+}
+
+
+@media (max-width: 768px) {
+  .booth-body {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .coin-slot {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid var(--border);
+    padding: 20px 10px;
+  }
+
+  .booth-header {
+    font-size: 2rem;
+    padding: 10px 20px;
+  }
 }
