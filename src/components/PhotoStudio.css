@@ -237,6 +237,10 @@
       transform: scaleX(-1);
     }
 
+    .strip-photo-img {
+      transform: scaleX(-1);
+    }
+
     .filter-bar {
       -webkit-overflow-scrolling: touch;
       scrollbar-width: thin;
