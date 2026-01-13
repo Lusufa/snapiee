@@ -165,7 +165,7 @@
 }
 
 .studio-result{
-    background-image: url('/images/ch .png');
+    background-image: url('/images/ch.png');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -217,20 +217,45 @@
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
     .photoStudio {
-        padding: 10px;
+        padding: 0;
     }
     .studio-container {
-        padding: 15px;
-        margin: auto;
+        padding: 10px;
+        margin: 0;
         width: 100%;
+        height: 100vh;
         max-width: 100%;
-        border-radius: 15px;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
     }
 
     .studio-webcam {
-      aspect-ratio: 4/3;
       border-radius: 15px;
+      flex-grow: 1; /* This will make it take up available space */
+      min-height: 0; /* Override previous min-height */
     }
+
+    .filter-bar {
+      overflow-x: scroll; /* Explicitly set to scroll */
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: gold #1a1a1a;
+      padding: 10px 0;
+      flex-shrink: 0; /* Prevent shrinking */
+    }
+    /* Make scrollbar visible on webkit browsers */
+    .filter-bar::-webkit-scrollbar {
+        height: 5px;
+    }
+    .filter-bar::-webkit-scrollbar-track {
+        background: #1a1a1a;
+    }
+    .filter-bar::-webkit-scrollbar-thumb {
+        background-color: gold;
+        border-radius: 6px;
+    }
+
 
     .photostrip-frame {
       padding: 15px;
