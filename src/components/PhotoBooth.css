@@ -139,15 +139,19 @@
 
 @media (max-width: 768px) {
   .booth-body {
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
   }
 
   .coin-slot {
-    width: 100%;
-    border-right: none;
-    border-bottom: 2px solid var(--border);
-    padding: 20px 10px;
+    width: 100px;
+    border-right: 2px solid var(--border);
+    border-bottom: none;
+    padding: 10px;
+  }
+
+  .curtain-wrapper {
+    min-height: 400px;
   }
 
   .booth-header {
